@@ -11,23 +11,32 @@
 </head>
 <body>
     <header>
-        <nav></nav>
+        <nav>
+            <ul>
+                <li>Inicio</li>
+                <li>Quien soy</li>
+                <li>Servicios</li>
+                <li>Contacto</li>
+            </ul>
+        </nav>
         <h1>Hola, soy Axel Leguero</h1>
         <img class="foto" src="Imagen1.jpg" alt="mi foto de perfil">
     </header>
-    
+    <p>Hola soy Axel, un programador Front-end con conocimientos en HTML, CSS, JavaScript, Java y PHP</p>
     <div id="popup" class="popup"></div>
     <section>
-        <form action="POST">
-            <input type="text" name="name" placeholder="Nombre y Apellido">
-            <input type="number" name="dni" placeholder="DNI">
-            <input type="email" name="name" placeholder="Email">
+        <form action="enviar.php" method="POST" class="form_contact">
+            <input type="text" class="name entry" name="nombre" placeholder="Nombre y Apellido" required>
+            <input type="number" class="number entry" name="dni" placeholder="DNI">
+            <input type="email" class="email entry" name="correo" placeholder="Email" required> 
+            <textarea class="message entry" placeholder="mensaje" cols="50" rows="10" required></textarea>
             <input type="submit" name="name" >
+            <button class="submit entry" onclick="Gracias()">enviar</button>
         </form>
     </section>
     <script src="js/scripts.js"></script>
     <footer>
-        
+
     </footer>
 </body>
 
