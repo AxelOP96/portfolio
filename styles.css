@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,300&family=Roboto+Mono:ital,wght@1,300&display=swap');
 *{
     box-sizing: border-box;
+    margin: 0;
     color: #fff;
     font-family: 'Roboto Condensed', sans-serif;
     font-family: 'Roboto Mono', monospace;
@@ -17,21 +18,25 @@
     transform: scale(0);
     transition: transform 0.5s ease-in-out;
   }
-  
+
   .popup--show {
     transform: scale(1);
   }
 
 body{
     background-color:steelblue;
-    background-image: url(./img/night.webp);
-    background-size: cover;
+    background-image: url(./img/fondo.webp);
+    background-size: contain;
     background-repeat: no-repeat;
 }
 .foto{
     border-radius: 50%;
     margin:auto;
-    
+    width: 200px;
+}
+.nav{
+    background-color: rgb(188, 196, 208);
+    height: fit-content;
 }
 h1{
     text-align: center;
