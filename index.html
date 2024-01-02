@@ -26,6 +26,23 @@
 
         <section id="proyectos-buenos">
             <h2>Proyectos Frontend</h2>
+            <div class="columna">
+                <div class="caja">
+                    <a href="./html/nav.html"><h3>Nav</h3></a>
+                </div>
+                <div class="caja">
+                    <a href="./html/nav.html"><h3>Nav</h3></a>
+                </div>
+                <div class="caja">
+                    <a href="./html/nav.html"><h3>Nav</h3></a>
+                </div>
+            </div>
+            <div class="columna">
+                <a href="./html/nav.html"><h3>Nav</h3></a>
+            </div>
+            <div class="columna">
+                <a href="./html/nav.html"><h3>Nav</h3></a>
+            </div>
         </section>
         <section id="proyectos-practica">
             <h2>Proyectos Backend</h2>
@@ -51,12 +68,18 @@
         <div id="popup" class="popup"></div>
         <section>
             <form action="enviar.php" method="POST" class="form_contact">
-                <input type="text" class="name entry" name="nombre" placeholder="Nombre y Apellido" required>
-                <input type="number" class="number entry" name="dni" placeholder="DNI">
-                <input type="email" class="email entry" name="correo" placeholder="Email" required>
-                <textarea class="message entry"  cols="30" rows="10" required></textarea>
-                <input type="submit" name="name" value="Enviar">
-
+                <fieldset>
+                    <legend>Formulario de contacto</legend>
+                    <label for="nombre">Ingrese su nombre completo</label>
+                    <input type="text" class="name entry" name="nombre" placeholder="Ej: Juan Gonzalez" required>
+                    <label for="number">Ingrese su número</label>
+                    <input type="number" class="number entry" name="number" placeholder="Ej: 1112345678">
+                    <label for="nombre">Ingrese su correo</label>
+                    <input type="email" class="email entry" name="correo" placeholder="Ej: juan@gmail.com" required>
+                    <label for="nombre">Comentarios</label>
+                    <textarea class="message entry"  cols="30" rows="10"></textarea>
+                    <input class="boton" type="submit" name="enviar" value="Enviar">
+                </fieldset>
             </form>
         </section>
     </main>

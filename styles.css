@@ -17,11 +17,10 @@
     border-radius: 20px;
     transform: scale(0);
     transition: transform 0.5s ease-in-out;
-  }
-
-  .popup--show {
+}
+.popup--show {
     transform: scale(1);
-  }
+}
 
 body{
     background-color:steelblue;
@@ -35,7 +34,7 @@ body{
     width: 200px;
 }
 .nav{
-    background-color: rgb(188, 196, 208);
+    background-color: #48e;
     height: fit-content;
 }
 h1{
@@ -50,10 +49,10 @@ header{
 form{
     box-shadow: 10px 13px 37px #000;
     padding: 50px 20px;
-    background-color: #ededed;
+    background-color: #918c8c;
     /* para ajustar automaticamente a los margenes */
     margin: calc(25% + 100px);
-    margin-top:700px;
+    margin-top:50px;
     padding-top: 28px;
     margin-bottom:30px;
 }
@@ -63,14 +62,18 @@ input{
     margin:auto;
     margin-top:12px;
     font-size:16px;
+    border-radius: 25px;
+    border: none;
+    outline: none;
 }
 input[type='submit']{
     background-color: #48e;
-    box-shadow: 10px 13px 37px #000;
     color: #fff;
     width:calc(50% -20px);
-    margin: 0 10px;
-    margin-top:22px;
     border: none;
 
+}
+.boton{
+    width: 150px;
+    text-align: center;
 }
