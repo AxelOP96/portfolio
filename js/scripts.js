@@ -50,4 +50,4 @@ popup.addEventListener('transitionend', e => {
   }
 });
 
-generatePopUp(messages[counter]);
+//generatePopUp(messages[counter]);
