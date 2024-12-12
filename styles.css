@@ -73,10 +73,6 @@ input[type='submit']{
     width: 150px;
     text-align: center;
 } */
-.profile{
-    
-}
-
 :root{
     --bg-color: #081b29;
     --main-color: #00abf0;
@@ -94,7 +90,7 @@ body{
     align-items: center;
     min-height: 100vh;
     background: var(--bg-color);
-    color: var(--bg-color);
+    
 }
 .wrapper{
     position: relative;
@@ -134,7 +130,7 @@ body{
     position: absolute;
     width: 50%;
     height: 100%;
-    /* background: var(--pages-color); */
+    background: var(--pages-color); 
     box-shadow: 0 0 .6rem rgba(0, 0, 0, .1);
     display: flex;
     padding: 2rem;
@@ -153,4 +149,40 @@ h1, h3, p{
     border-radius: 50%;
     border: .25rem solid var(--main-color);
     margin-bottom: .8rem;
+}
+.profile-page h1{
+    font-size: 2.7rem;
+    line-height: 1;
+}
+.profile-page h3{
+    font-size: 1.5rem;
+    color: var(--main-color);
+}
+.profile-page .social-media{
+    margin: .6rem 0 .8rem;
+}
+.profile-page .social-media a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: transparent;
+    border: var(--border);
+    border-radius: 50%;
+    font-size: 1.3rem;
+    color: var(--main-color);
+    margin: 0 .2rem;
+    transition: .5s;
+}
+.profile-page .social-media a i{
+    color: var(--main-color);
+}
+.profile-page .social-media a:hover{
+    background: var(--main-color);
+    color: var(--white-color);
+    
+}
+.profile-page p{
+    text-align: justify;
 }
