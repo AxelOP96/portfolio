@@ -2,8 +2,9 @@
 *{
     box-sizing: border-box;
     margin: 0;
+    padding: 0;
+    text-decoration: none;
     color: #fff;
-    font-family: 'Roboto Condensed', sans-serif;
     font-family: 'Roboto Mono', monospace;
 }
 .popup {
@@ -22,12 +23,7 @@
     transform: scale(1);
 }
 
-body{
-    background-color:steelblue;
-    background-image: url(./img/fondo.webp);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
+
 .foto{
     border-radius: 50%;
     margin:auto;
@@ -76,4 +72,41 @@ input[type='submit']{
 .boton{
     width: 150px;
     text-align: center;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+:root{
+    --bg-color: #081b29;
+    --main-color: #00abf0;
+    --text-color:#333;
+    --secont-text-color: #555;
+    --white-color:#fff;
+    --cover-color: linear-gradient(45deg, #00abf0, #006e9a);
+    --pages-color: linear-gradient(90deg, #fff;#ddd);
+    --border: .125rem solid #00abf0;
+    --box-shadow: 0 0 .6rem rgba(0, 0 , 0 .2);
+}
+
+.wrapper{
+    position: relative;
+    width: 66rem;
+    height: 45rem;
+    background-color: rgb(244, 244, 198);
+}
+.cover{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    box-shadow: var(--box-shadow);
+    border-top-left-radius: .6rem;
+    border-bottom-left-radius: .6rem;
+    transform-origin: right;
+}
+
+.cover.cover-right.turn{
+    transform: rotateY(180deg);
 }
