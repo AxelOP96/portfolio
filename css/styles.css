@@ -149,7 +149,7 @@ span i{
 }
 .profile-page img{
     max-width: 180px;
-    border-radius: 50%;
+    border-radius: 45%;
     border: .25rem solid var(--main-color);
     margin-bottom: .8rem;
 }
@@ -226,6 +226,10 @@ span i{
     position: absolute;
     right: 0;
     transform-style: preserve-3d;
+    transform-origin: left;
+}
+.book-page.page-right.turn{
+    transform: rotateY(-180deg);
 }
 .book-page .page-front,
 .book-page .page-back{
@@ -283,4 +287,17 @@ span i{
     right: 1.5rem;
     width: 2rem;
     height: 2rem;
+    cursor: pointer;
+    font-size: 2rem;
+    color: var(--secont-text-color);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: var(--border);
+    border-radius: 50%;
+    transition: .5s;
+}
+.nextprev-btn:hover{
+    background: var(--main-color);
+    color: var(--second-text-color);
 }
