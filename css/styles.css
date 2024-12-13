@@ -178,6 +178,9 @@ h1, h3, p{
 .profile-page .social-media a i{
     color: var(--main-color);
 }
+.profile-page .social-media a i:hover{
+    color: var(--white-color);
+}
 .profile-page .social-media a:hover{
     background: var(--main-color);
     color: var(--white-color);
@@ -185,4 +188,34 @@ h1, h3, p{
 }
 .profile-page p{
     text-align: justify;
+}
+.btn-box{
+    margin-top: 1.2rem;
+}
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 9.5rem;
+    height: 3rem;
+    background: var(--main-color);
+    border:var(--border);
+    border-radius: .3rem;
+    font-size: 1rem;
+    color: var(--white-color);
+    font-weight: 500;
+    margin: 0 1rem;
+    transform: .5s;
+}
+.btn:hover{
+    background:transparent ;
+    color: var(--main-color);
+}
+.btn-box .btn:nth-child(2){
+    background: transparent;
+    color: var(--main-color);
+}
+.btn-box .btn:nth-child(2):hover{
+    background: var(--main-color);
+    color: var(--white-color);
 }
