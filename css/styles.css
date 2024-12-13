@@ -138,6 +138,9 @@ body{
 h1, h3, p, .year{
     color: black;
 }
+span{
+    color: black;
+}
 span i{
     color: var(--main-color)
 }
@@ -300,4 +303,27 @@ span i{
 .nextprev-btn:hover{
     background: var(--main-color);
     color: var(--second-text-color);
+}
+.skills-box{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.skills-box .skills-content{
+    flex: 1 1 20rem;
+}
+.skills-content h3{
+    font-size: 1.3rem;
+    line-height: 1;
+    margin-bottom: .6rem;
+}
+.skills-content .content{
+    display: flex;
+    flex-wrap: wrap;
+}
+.skills-content .content span{
+    display: inline-flex;
+    width: 6rem;
+    height: 5rem;
+    border: var(--border);
 }
