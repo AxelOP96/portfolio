@@ -1,57 +1,4 @@
-/* const popup = document.getElementById('popup');
-let counter = 0;
-const messages = [
-  {
-    name: 'HTML',
-    job: 'Billionaire and jester'
-  },
-  {
-    name: 'CSS',
-    job: 'Sleeper'
-  },
-  {
-    name: 'JavaScript',
-    job: 'Eater'
-  },
-  {
-    name: 'PHP',
-    job: 'Sleeper'
-  },
-];
 
-const generatePopUp = ({ name, job }) => {
-  setTimeout(() => {
-    popup.innerHTML = '';
-    const fragment = document.createDocumentFragment();
-    const h3 = document.createElement('h3');
-    h3.textContent = name;
-    h3.classList.add('popup__title');
-    const text = document.createElement('p');
-    text.textContent = job;
-    text.classList.add('popup__text');
-    fragment.appendChild(h3);
-    fragment.appendChild(text);
-    popup.appendChild(fragment);
-    popup.classList.add('popup--show');
-  }, 3000);
-};
-
-popup.addEventListener('transitionend', e => {
-  if (popup.classList.contains('popup--show')) {
-    setTimeout(() => {
-      popup.classList.remove('popup--show');
-      if (counter >= messages.length - 1) {
-        counter = 0;
-      } else {
-        counter = counter + 1;
-      }
-      generatePopUp(messages[counter]);
-    }, 3000);
-  }
-}); */
-
-//generatePopUp(messages[counter]);
-//////////////////////////////
 const pageTurnBtn = document.querySelectorAll('.nextprev-btn');
 
 pageTurnBtn.forEach((elem, index) => {
@@ -141,3 +88,24 @@ pages.forEach((_, index) => {
 
   }, (index + 1) * 200 + 2100)
 })
+//// Animación de los proyectos///
+
+let nextDom = document.getElementById('next');
+let prevDom = document.getElementById('prev');
+let carouselDom = document.querySelector('.carousel');
+let listItemDom = document.querySelector('.carousel .list');
+let thumbnailDom = document.querySelector('.carousel .thumbnail');
+
+nextDom.onclick = function(){
+  showSlider('next');
+}
+function showSlider(type){
+  let itemSlider = document.querySelectorAll('carousel .list .item');
+  let itemThumbnail = document.querySelectorAll('carousel .thumbnail');
+
+  if(type === 'next'){
+    listItemDom.appendChild(itemSlider[0]);
+    thumbnailDom.appendChild(itemThumbnail[0]);
+    carouselDom.classList.add('next');
+  }
+}
