@@ -470,14 +470,14 @@ transition: .5s ease;
 
 .carousel{
     width: 100%;
-    height: 65%;
+    height: 80%;
     overflow: hidden;
     position: relative;
     
 }
 .content div{
     font-family: "Poppins", serif;
-    color: rgb(249, 231, 197);
+    color: rgb(9, 181, 3);
     font-weight: 700;
 }
 .carousel .list .item{
@@ -492,7 +492,7 @@ transition: .5s ease;
 .carousel .list .item .content{
     position: absolute;
     top: 20%;
-    max-width: 80%;
+    max-width: 90%;
     transform: translate(-50%);
     left: 50%;
     padding-right: 30%;
@@ -507,4 +507,135 @@ transition: .5s ease;
     font-weight: bold;
     font-size: 5em;
     list-style: 1.3em;
+}
+.carousel .list .item .content .topic{
+    color: #f1683a;
+}
+.carousel .list .item .content .buttons{
+    display: grid;
+    grid-template-columns: repeat(2,13);
+    grid-template-rows: 30px;
+    gap: 5px;
+}
+.carousel .list .item .content button{
+    border: none;
+    background-color: #eee;
+    letter-spacing: 3px;
+    font-family: Poppins;
+    font-weight: 500;
+}
+.carousel .list .item .content button:nth-child(2){
+    background-color: transparent;
+    color: #eee;
+    border: 1px solid #eee;
+}
+.thumbnail{
+    position: absolute;
+    bottom: 240px;
+    left: 4%;
+    width: max-content;
+    z-index: 100;
+    display: flex;
+    gap: 20px;
+}
+.thumbnail .item{
+    width: 100px;
+    height: 200px;
+    flex-shrink: 0;
+    position: relative;
+}
+.thumbnail .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+/*Hasta acá perfe bro*/
+.thumbnail .item .content{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+}
+.thumbnail .item .content .title{
+    font-weight: bold;
+}
+.arrows{
+    position: absolute;
+    top: 80%;
+    right: 30%;
+    width: 300px;
+    max-width: 30%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.arrows button{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #eee4;
+    border: none;
+    font-family: monospace;
+    color: #363434;
+    font-weight: bold;
+    font-size: large;
+    transition: .5s;
+    z-index: 100;
+}
+.arrows button:hover{
+    background-color: #c64444;
+    color: #555;
+}
+.carousel .list .item:nth-child(1){
+    z-index: 1;
+}
+.carousel .list .item:nth-child(1) .author,
+.carousel .list .item:nth-child(1) .title,
+.carousel .list .item:nth-child(1) .topic,
+.carousel .list .item:nth-child(1) .des,
+.carousel .list .item:nth-child(1) .buttons{
+    transform: translateY(50px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent 0.5s 1s linear 1 forwards;
+}
+@keyframes showContent {
+    to{
+        opacity: 1;
+        filter: blur(0);
+        transform: translateY(0);
+    }
+}
+.carousel .list .item:nth-child(1) .title{
+    animation-delay: 1.2s;
+}
+.carousel .list .item:nth-child(1) .topic{
+    animation-delay: 1.4s;
+}
+.carousel .list .item:nth-child(1) .des{
+    animation-delay: 1.6s;
+}
+.carousel .list .item:nth-child(1) .buttons{
+    animation-delay: 1.8s;
+}
+
+/*Effect*/
+.carousel.next .list .item:nth-child(1) img{
+    width: 150px;/*Modificar tal vez esto, el height, el left y el bottom*/
+    height: 220px;
+    position: absolute;
+    left: 50%;
+    bottom: 50px;
+    border-radius: 20px;
+    animation: showImage 0.5s linear 1 forwards;
+}
+@keyframes showImage {
+    to{
+        width: 100%;
+        height: 100%;
+        left: 0;
+        bottom: 0;
+        border-radius: 0;
+    }
 }
