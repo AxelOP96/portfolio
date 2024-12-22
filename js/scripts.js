@@ -109,8 +109,8 @@ let runAutoRun = setTimeout(() =>{
   nextDom.click();
 },timeAutoNext);
 function showSlider(type){
-  let itemSlider = document.querySelectorAll('carousel .list .item');
-  let itemThumbnail = document.querySelectorAll('carousel .thumbnail');
+  let itemSlider = document.querySelectorAll('.carousel .list .item');
+  let itemThumbnail = document.querySelectorAll('.carousel .thumbnail');
 
   if(type === 'next'){
     listItemDom.appendChild(itemSlider[0]);
@@ -129,5 +129,7 @@ function showSlider(type){
   }, timeRunning)
 
   clearTimeout(runAutoRun);
-  
+  runAutoRun = setTimeout(() =>{
+    nextDom.click();
+  },timeAutoNext);
 }
