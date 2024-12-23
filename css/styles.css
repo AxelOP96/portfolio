@@ -518,7 +518,7 @@ a{
 .carousel .list .item .content .buttons{
     display: grid;
     grid-template-columns: repeat(2,130px);
-    grid-template-rows: 30px;
+    grid-template-rows: 40px;
     gap: 5px;
 }
 .carousel .list .item .content button{
