@@ -108,7 +108,9 @@ let runTimeOut;
 let runAutoRun = setTimeout(() =>{
   nextDom.click();
 },timeAutoNext);
-function showSlider(type){
+/* function showSlider(type){
+
+
   let itemSlider = document.querySelectorAll('.carousel .list .item');
   let itemThumbnail = document.querySelectorAll('.carousel .thumbnail');
 
@@ -132,4 +134,41 @@ function showSlider(type){
   runAutoRun = setTimeout(() =>{
     nextDom.click();
   },timeAutoNext);
-}
+} */
+
+  function showSlider(type) {
+    let itemSlider = document.querySelectorAll('.carousel .list .item');
+    let itemThumbnail = document.querySelectorAll('.carousel .thumbnail');
+  
+    if (type === 'next') {
+      // Mover el primer elemento al final solo si no hay conflicto
+      if (listItemDom.contains(itemSlider[0])) {
+        listItemDom.appendChild(itemSlider[0]);
+      }
+      if (thumbnailDom.contains(itemThumbnail[0])) {
+        thumbnailDom.appendChild(itemThumbnail[0]);
+      }
+      carouselDom.classList.add('next');
+    } else {
+      let positionLastItem = itemSlider.length - 1;
+      // Mover el último elemento al principio solo si no hay conflicto
+      if (listItemDom.contains(itemSlider[positionLastItem])) {
+        listItemDom.prepend(itemSlider[positionLastItem]);
+      }
+      if (thumbnailDom.contains(itemThumbnail[positionLastItem])) {
+        thumbnailDom.prepend(itemThumbnail[positionLastItem]);
+      }
+      carouselDom.classList.add('prev');
+    }
+    
+    clearTimeout(runTimeOut);
+    runTimeOut = setTimeout(() => {
+      carouselDom.classList.remove('next');
+      carouselDom.classList.remove('prev');
+    }, timeRunning);
+  
+    clearTimeout(runAutoRun);
+    runAutoRun = setTimeout(() => {
+      nextDom.click();
+    }, timeAutoNext);
+  }
