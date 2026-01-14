@@ -167,7 +167,18 @@ section{
     transform: scale(1.1);
 }
 /*Skills*/
-
+.skills-content h3{
+    font-size: 3.5rem;
+    gap: 2rem;
+    color:  rgb(0, 157, 255);
+    padding: 2rem;
+}
+.content span i{
+    font-size: 3rem;
+    transition: 0.3s ease-in-out;
+    gap: 2rem;
+    padding: 1rem;
+}
 /*Projects*/
 
 .projects-grid{
@@ -294,6 +305,9 @@ footer ul li a{
     }
     header .visit-btn{
         display: none;
+    }
+    .about-container{
+        flex-direction: column;
     }
     .input-box input{
         padding: 1rem 2rem;
